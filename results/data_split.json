@@ -1,0 +1,23 @@
+{
+  "n_images": 2165,
+  "n_groups": 287,
+  "k_neighbours": 20,
+  "min_inliers": 12,
+  "sure_similarity": 0.86,
+  "groups_with_duplicates": 282,
+  "split_counts": {
+    "train": {
+      "benign": 926,
+      "malignant": 729
+    },
+    "val": {
+      "benign": 149,
+      "malignant": 148
+    },
+    "test": {
+      "benign": 120,
+      "malignant": 93
+    }
+  },
+  "max_test_train_similarity": 0.8303498029708862
+}

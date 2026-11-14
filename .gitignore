@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+.env
+
+# dataset and generated arrays (see README)
+data/
+
+# trained weights
+models/*.keras
+models/*.npz
+
+.DS_Store
+Thumbs.db
+desktop.ini

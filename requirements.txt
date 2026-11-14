@@ -1,0 +1,11 @@
+tensorflow>=2.15
+numpy
+scipy
+scikit-learn
+scikit-image
+opencv-python
+pillow
+matplotlib
+flask
+flask-cors
+requests

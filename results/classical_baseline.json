@@ -1,0 +1,53 @@
+{
+  "all_features": {
+    "n_features": 37,
+    "cv_balanced_accuracy": 0.7453,
+    "test_accuracy": 0.6808,
+    "test_balanced_accuracy": 0.6707,
+    "test_f1": 0.618,
+    "test_roc_auc": 0.68
+  },
+  "ga_pso_selected": {
+    "n_features": 16,
+    "cv_balanced_accuracy": 0.76,
+    "test_accuracy": 0.6009,
+    "test_balanced_accuracy": 0.595,
+    "test_f1": 0.5455,
+    "test_roc_auc": 0.6432
+  },
+  "selected_features": [
+    "L_mean",
+    "L_std",
+    "a_mean",
+    "a_std",
+    "b_std",
+    "glcm_dissimilarity",
+    "lbp_1",
+    "lbp_4",
+    "lbp_7",
+    "lbp_9",
+    "lbp_10",
+    "lbp_11",
+    "lbp_12",
+    "lbp_16",
+    "lbp_22",
+    "lbp_23"
+  ],
+  "ga_pso_history": [
+    0.2523,
+    0.2512,
+    0.2487,
+    0.2454,
+    0.2454,
+    0.2443,
+    0.2443,
+    0.2443,
+    0.2443,
+    0.2443,
+    0.2443,
+    0.2443,
+    0.2443,
+    0.2443,
+    0.2443
+  ]
+}

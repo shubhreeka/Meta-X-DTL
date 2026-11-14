@@ -1,0 +1,629 @@
+{
+  "selected_by_validation": {
+    "backbone": "VGG16",
+    "input": "pso_enhanced",
+    "head": "Ensemble (PSO+GWO+FA+GA-PSO)",
+    "val_logloss": 0.2835,
+    "val_auc": 0.9534,
+    "val_accuracy": 0.8687,
+    "test_accuracy": 0.7465,
+    "test_balanced_accuracy": 0.7351,
+    "test_precision": 0.7407,
+    "test_recall_sensitivity": 0.6452,
+    "test_specificity": 0.825,
+    "test_f1": 0.6897,
+    "test_roc_auc": 0.8283,
+    "test_confusion_matrix": [
+      [
+        99,
+        21
+      ],
+      [
+        33,
+        60
+      ]
+    ]
+  },
+  "rows": [
+    {
+      "backbone": "VGG16",
+      "input": "original",
+      "head": "PSO",
+      "val_logloss": 0.3668,
+      "val_auc": 0.9442,
+      "val_accuracy": 0.862,
+      "test_accuracy": 0.7136,
+      "test_balanced_accuracy": 0.7023,
+      "test_precision": 0.6951,
+      "test_recall_sensitivity": 0.6129,
+      "test_specificity": 0.7917,
+      "test_f1": 0.6514,
+      "test_roc_auc": 0.7927,
+      "test_confusion_matrix": [
+        [
+          95,
+          25
+        ],
+        [
+          36,
+          57
+        ]
+      ]
+    },
+    {
+      "backbone": "VGG16",
+      "input": "original",
+      "head": "GWO",
+      "val_logloss": 0.3836,
+      "val_auc": 0.9313,
+      "val_accuracy": 0.8552,
+      "test_accuracy": 0.7371,
+      "test_balanced_accuracy": 0.7255,
+      "test_precision": 0.7284,
+      "test_recall_sensitivity": 0.6344,
+      "test_specificity": 0.8167,
+      "test_f1": 0.6782,
+      "test_roc_auc": 0.8097,
+      "test_confusion_matrix": [
+        [
+          98,
+          22
+        ],
+        [
+          34,
+          59
+        ]
+      ]
+    },
+    {
+      "backbone": "VGG16",
+      "input": "original",
+      "head": "FA",
+      "val_logloss": 0.3697,
+      "val_auc": 0.9437,
+      "val_accuracy": 0.8653,
+      "test_accuracy": 0.7418,
+      "test_balanced_accuracy": 0.7309,
+      "test_precision": 0.7317,
+      "test_recall_sensitivity": 0.6452,
+      "test_specificity": 0.8167,
+      "test_f1": 0.6857,
+      "test_roc_auc": 0.8193,
+      "test_confusion_matrix": [
+        [
+          98,
+          22
+        ],
+        [
+          33,
+          60
+        ]
+      ]
+    },
+    {
+      "backbone": "VGG16",
+      "input": "original",
+      "head": "GA-PSO",
+      "val_logloss": 0.4211,
+      "val_auc": 0.9321,
+      "val_accuracy": 0.8485,
+      "test_accuracy": 0.6901,
+      "test_balanced_accuracy": 0.6815,
+      "test_precision": 0.6552,
+      "test_recall_sensitivity": 0.6129,
+      "test_specificity": 0.75,
+      "test_f1": 0.6333,
+      "test_roc_auc": 0.7839,
+      "test_confusion_matrix": [
+        [
+          90,
+          30
+        ],
+        [
+          36,
+          57
+        ]
+      ]
+    },
+    {
+      "backbone": "VGG16",
+      "input": "original",
+      "head": "Default (no optimisation)",
+      "val_logloss": 0.3901,
+      "val_auc": 0.9376,
+      "val_accuracy": 0.8721,
+      "test_accuracy": 0.7042,
+      "test_balanced_accuracy": 0.6988,
+      "test_precision": 0.663,
+      "test_recall_sensitivity": 0.6559,
+      "test_specificity": 0.7417,
+      "test_f1": 0.6595,
+      "test_roc_auc": 0.808,
+      "test_confusion_matrix": [
+        [
+          89,
+          31
+        ],
+        [
+          32,
+          61
+        ]
+      ]
+    },
+    {
+      "backbone": "VGG16",
+      "input": "pso_enhanced",
+      "head": "PSO",
+      "val_logloss": 0.3292,
+      "val_auc": 0.9443,
+      "val_accuracy": 0.8687,
+      "test_accuracy": 0.7183,
+      "test_balanced_accuracy": 0.7101,
+      "test_precision": 0.6897,
+      "test_recall_sensitivity": 0.6452,
+      "test_specificity": 0.775,
+      "test_f1": 0.6667,
+      "test_roc_auc": 0.8174,
+      "test_confusion_matrix": [
+        [
+          93,
+          27
+        ],
+        [
+          33,
+          60
+        ]
+      ]
+    },
+    {
+      "backbone": "VGG16",
+      "input": "pso_enhanced",
+      "head": "GWO",
+      "val_logloss": 0.3293,
+      "val_auc": 0.94,
+      "val_accuracy": 0.8788,
+      "test_accuracy": 0.7183,
+      "test_balanced_accuracy": 0.7077,
+      "test_precision": 0.6988,
+      "test_recall_sensitivity": 0.6237,
+      "test_specificity": 0.7917,
+      "test_f1": 0.6591,
+      "test_roc_auc": 0.8187,
+      "test_confusion_matrix": [
+        [
+          95,
+          25
+        ],
+        [
+          35,
+          58
+        ]
+      ]
+    },
+    {
+      "backbone": "VGG16",
+      "input": "pso_enhanced",
+      "head": "FA",
+      "val_logloss": 0.2973,
+      "val_auc": 0.9559,
+      "val_accuracy": 0.8754,
+      "test_accuracy": 0.7465,
+      "test_balanced_accuracy": 0.7339,
+      "test_precision": 0.7468,
+      "test_recall_sensitivity": 0.6344,
+      "test_specificity": 0.8333,
+      "test_f1": 0.686,
+      "test_roc_auc": 0.8334,
+      "test_confusion_matrix": [
+        [
+          100,
+          20
+        ],
+        [
+          34,
+          59
+        ]
+      ]
+    },
+    {
+      "backbone": "VGG16",
+      "input": "pso_enhanced",
+      "head": "GA-PSO",
+      "val_logloss": 0.3325,
+      "val_auc": 0.9435,
+      "val_accuracy": 0.8653,
+      "test_accuracy": 0.7512,
+      "test_balanced_accuracy": 0.7417,
+      "test_precision": 0.7381,
+      "test_recall_sensitivity": 0.6667,
+      "test_specificity": 0.8167,
+      "test_f1": 0.7006,
+      "test_roc_auc": 0.8247,
+      "test_confusion_matrix": [
+        [
+          98,
+          22
+        ],
+        [
+          31,
+          62
+        ]
+      ]
+    },
+    {
+      "backbone": "VGG16",
+      "input": "pso_enhanced",
+      "head": "Default (no optimisation)",
+      "val_logloss": 0.5173,
+      "val_auc": 0.8774,
+      "val_accuracy": 0.8114,
+      "test_accuracy": 0.7136,
+      "test_balanced_accuracy": 0.7083,
+      "test_precision": 0.6739,
+      "test_recall_sensitivity": 0.6667,
+      "test_specificity": 0.75,
+      "test_f1": 0.6703,
+      "test_roc_auc": 0.7921,
+      "test_confusion_matrix": [
+        [
+          90,
+          30
+        ],
+        [
+          31,
+          62
+        ]
+      ]
+    },
+    {
+      "backbone": "ResNet50",
+      "input": "original",
+      "head": "PSO",
+      "val_logloss": 0.3784,
+      "val_auc": 0.9369,
+      "val_accuracy": 0.8418,
+      "test_accuracy": 0.7089,
+      "test_balanced_accuracy": 0.7102,
+      "test_precision": 0.6505,
+      "test_recall_sensitivity": 0.7204,
+      "test_specificity": 0.7,
+      "test_f1": 0.6837,
+      "test_roc_auc": 0.8237,
+      "test_confusion_matrix": [
+        [
+          84,
+          36
+        ],
+        [
+          26,
+          67
+        ]
+      ]
+    },
+    {
+      "backbone": "ResNet50",
+      "input": "original",
+      "head": "GWO",
+      "val_logloss": 0.3585,
+      "val_auc": 0.9318,
+      "val_accuracy": 0.8283,
+      "test_accuracy": 0.723,
+      "test_balanced_accuracy": 0.7239,
+      "test_precision": 0.6667,
+      "test_recall_sensitivity": 0.7312,
+      "test_specificity": 0.7167,
+      "test_f1": 0.6974,
+      "test_roc_auc": 0.8243,
+      "test_confusion_matrix": [
+        [
+          86,
+          34
+        ],
+        [
+          25,
+          68
+        ]
+      ]
+    },
+    {
+      "backbone": "ResNet50",
+      "input": "original",
+      "head": "FA",
+      "val_logloss": 0.3982,
+      "val_auc": 0.9406,
+      "val_accuracy": 0.8653,
+      "test_accuracy": 0.7277,
+      "test_balanced_accuracy": 0.7269,
+      "test_precision": 0.6768,
+      "test_recall_sensitivity": 0.7204,
+      "test_specificity": 0.7333,
+      "test_f1": 0.6979,
+      "test_roc_auc": 0.828,
+      "test_confusion_matrix": [
+        [
+          88,
+          32
+        ],
+        [
+          26,
+          67
+        ]
+      ]
+    },
+    {
+      "backbone": "ResNet50",
+      "input": "original",
+      "head": "GA-PSO",
+      "val_logloss": 0.4611,
+      "val_auc": 0.9315,
+      "val_accuracy": 0.8182,
+      "test_accuracy": 0.6901,
+      "test_balanced_accuracy": 0.6972,
+      "test_precision": 0.6195,
+      "test_recall_sensitivity": 0.7527,
+      "test_specificity": 0.6417,
+      "test_f1": 0.6796,
+      "test_roc_auc": 0.8051,
+      "test_confusion_matrix": [
+        [
+          77,
+          43
+        ],
+        [
+          23,
+          70
+        ]
+      ]
+    },
+    {
+      "backbone": "ResNet50",
+      "input": "original",
+      "head": "Default (no optimisation)",
+      "val_logloss": 0.5807,
+      "val_auc": 0.925,
+      "val_accuracy": 0.8384,
+      "test_accuracy": 0.7793,
+      "test_balanced_accuracy": 0.7739,
+      "test_precision": 0.7556,
+      "test_recall_sensitivity": 0.7312,
+      "test_specificity": 0.8167,
+      "test_f1": 0.7432,
+      "test_roc_auc": 0.8426,
+      "test_confusion_matrix": [
+        [
+          98,
+          22
+        ],
+        [
+          25,
+          68
+        ]
+      ]
+    },
+    {
+      "backbone": "ResNet50",
+      "input": "pso_enhanced",
+      "head": "PSO",
+      "val_logloss": 0.3574,
+      "val_auc": 0.9375,
+      "val_accuracy": 0.862,
+      "test_accuracy": 0.7042,
+      "test_balanced_accuracy": 0.7073,
+      "test_precision": 0.6415,
+      "test_recall_sensitivity": 0.7312,
+      "test_specificity": 0.6833,
+      "test_f1": 0.6834,
+      "test_roc_auc": 0.7799,
+      "test_confusion_matrix": [
+        [
+          82,
+          38
+        ],
+        [
+          25,
+          68
+        ]
+      ]
+    },
+    {
+      "backbone": "ResNet50",
+      "input": "pso_enhanced",
+      "head": "GWO",
+      "val_logloss": 0.3527,
+      "val_auc": 0.9333,
+      "val_accuracy": 0.8316,
+      "test_accuracy": 0.662,
+      "test_balanced_accuracy": 0.6685,
+      "test_precision": 0.5929,
+      "test_recall_sensitivity": 0.7204,
+      "test_specificity": 0.6167,
+      "test_f1": 0.6505,
+      "test_roc_auc": 0.7851,
+      "test_confusion_matrix": [
+        [
+          74,
+          46
+        ],
+        [
+          26,
+          67
+        ]
+      ]
+    },
+    {
+      "backbone": "ResNet50",
+      "input": "pso_enhanced",
+      "head": "FA",
+      "val_logloss": 0.3823,
+      "val_auc": 0.9323,
+      "val_accuracy": 0.8418,
+      "test_accuracy": 0.6432,
+      "test_balanced_accuracy": 0.6483,
+      "test_precision": 0.5766,
+      "test_recall_sensitivity": 0.6882,
+      "test_specificity": 0.6083,
+      "test_f1": 0.6275,
+      "test_roc_auc": 0.7488,
+      "test_confusion_matrix": [
+        [
+          73,
+          47
+        ],
+        [
+          29,
+          64
+        ]
+      ]
+    },
+    {
+      "backbone": "ResNet50",
+      "input": "pso_enhanced",
+      "head": "GA-PSO",
+      "val_logloss": 0.4542,
+      "val_auc": 0.9131,
+      "val_accuracy": 0.8249,
+      "test_accuracy": 0.6244,
+      "test_balanced_accuracy": 0.6316,
+      "test_precision": 0.5565,
+      "test_recall_sensitivity": 0.6882,
+      "test_specificity": 0.575,
+      "test_f1": 0.6154,
+      "test_roc_auc": 0.7499,
+      "test_confusion_matrix": [
+        [
+          69,
+          51
+        ],
+        [
+          29,
+          64
+        ]
+      ]
+    },
+    {
+      "backbone": "ResNet50",
+      "input": "pso_enhanced",
+      "head": "Default (no optimisation)",
+      "val_logloss": 0.4979,
+      "val_auc": 0.9325,
+      "val_accuracy": 0.8485,
+      "test_accuracy": 0.6901,
+      "test_balanced_accuracy": 0.6899,
+      "test_precision": 0.6337,
+      "test_recall_sensitivity": 0.6882,
+      "test_specificity": 0.6917,
+      "test_f1": 0.6598,
+      "test_roc_auc": 0.7847,
+      "test_confusion_matrix": [
+        [
+          83,
+          37
+        ],
+        [
+          29,
+          64
+        ]
+      ]
+    },
+    {
+      "backbone": "VGG16",
+      "input": "original",
+      "head": "Ensemble (PSO+GWO+FA+GA-PSO)",
+      "val_logloss": 0.3596,
+      "val_auc": 0.9417,
+      "val_accuracy": 0.862,
+      "test_accuracy": 0.7277,
+      "test_balanced_accuracy": 0.7172,
+      "test_precision": 0.7108,
+      "test_recall_sensitivity": 0.6344,
+      "test_specificity": 0.8,
+      "test_f1": 0.6705,
+      "test_roc_auc": 0.8002,
+      "test_confusion_matrix": [
+        [
+          96,
+          24
+        ],
+        [
+          34,
+          59
+        ]
+      ]
+    },
+    {
+      "backbone": "VGG16",
+      "input": "pso_enhanced",
+      "head": "Ensemble (PSO+GWO+FA+GA-PSO)",
+      "val_logloss": 0.2835,
+      "val_auc": 0.9534,
+      "val_accuracy": 0.8687,
+      "test_accuracy": 0.7465,
+      "test_balanced_accuracy": 0.7351,
+      "test_precision": 0.7407,
+      "test_recall_sensitivity": 0.6452,
+      "test_specificity": 0.825,
+      "test_f1": 0.6897,
+      "test_roc_auc": 0.8283,
+      "test_confusion_matrix": [
+        [
+          99,
+          21
+        ],
+        [
+          33,
+          60
+        ]
+      ]
+    },
+    {
+      "backbone": "ResNet50",
+      "input": "original",
+      "head": "Ensemble (PSO+GWO+FA+GA-PSO)",
+      "val_logloss": 0.3626,
+      "val_auc": 0.9398,
+      "val_accuracy": 0.8485,
+      "test_accuracy": 0.7183,
+      "test_balanced_accuracy": 0.721,
+      "test_precision": 0.6571,
+      "test_recall_sensitivity": 0.7419,
+      "test_specificity": 0.7,
+      "test_f1": 0.697,
+      "test_roc_auc": 0.8246,
+      "test_confusion_matrix": [
+        [
+          84,
+          36
+        ],
+        [
+          24,
+          69
+        ]
+      ]
+    },
+    {
+      "backbone": "ResNet50",
+      "input": "pso_enhanced",
+      "head": "Ensemble (PSO+GWO+FA+GA-PSO)",
+      "val_logloss": 0.3485,
+      "val_auc": 0.9331,
+      "val_accuracy": 0.8384,
+      "test_accuracy": 0.6526,
+      "test_balanced_accuracy": 0.6578,
+      "test_precision": 0.5856,
+      "test_recall_sensitivity": 0.6989,
+      "test_specificity": 0.6167,
+      "test_f1": 0.6373,
+      "test_roc_auc": 0.7728,
+      "test_confusion_matrix": [
+        [
+          74,
+          46
+        ],
+        [
+          28,
+          65
+        ]
+      ]
+    }
+  ]
+}
