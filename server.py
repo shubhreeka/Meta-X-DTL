@@ -42,7 +42,14 @@ _load_local_env()
 
 
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
-GEMINI_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent"
+GEMINI_URL = "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
+# "gemini-flash-latest" always points at Google's current Flash model; the pinned model is a fallback
+# (e.g. when the alias is briefly overloaded). Older pinned versions get retired over time.
+GEMINI_MODELS = ["gemini-flash-latest", "gemini-3.8-flash"]
+
+
+class GeminiError(Exception):
+    """Error safe to show to users (never contains the API key)."""
 
 ENH = json.loads((RESULTS / "enhancement.json").read_text())
 MODEL = build_full_model()
@@ -76,12 +83,32 @@ def diagnose():
 
 def ask_gemini(system_prompt, user_query):
     if not GEMINI_API_KEY:
-        raise RuntimeError("Set the GEMINI_API_KEY environment variable to enable explanations.")
+        raise GeminiError("Put GEMINI_API_KEY=<your key> in the .env file in this folder to enable explanations.")
     payload = {"contents": [{"parts": [{"text": user_query}]}],
                "systemInstruction": {"parts": [{"text": system_prompt}]}}
-    r = requests.post(GEMINI_URL, params={"key": GEMINI_API_KEY}, json=payload, timeout=60)
-    r.raise_for_status()
-    return r.json()["candidates"][0]["content"]["parts"][0]["text"]
+    last = None
+    for model in GEMINI_MODELS:
+        try:
+            # key sent as a header, so it never appears in URLs, logs or error messages
+            r = requests.post(GEMINI_URL.format(model=model), headers={"x-goog-api-key": GEMINI_API_KEY},
+                              json=payload, timeout=30)
+        except requests.Timeout:
+            last = "busy"
+            continue
+        except requests.RequestException:
+            last = "unreachable"
+            continue
+        if r.ok:
+            return r.json()["candidates"][0]["content"]["parts"][0]["text"]
+        if r.status_code in (429, 500, 503):
+            last = "busy"
+        elif r.status_code in (400, 401, 403):
+            raise GeminiError("Explanation unavailable: the Gemini API key was rejected. Check GEMINI_API_KEY in .env.")
+        else:
+            last = f"HTTP {r.status_code}"
+    messages = {"busy": "Gemini is busy right now. Please try again in a minute.",
+                "unreachable": "could not connect to the Gemini API (check your internet connection)."}
+    raise GeminiError("Explanation unavailable: " + messages.get(last, f"Gemini API returned {last}."))
 
 
 @app.route("/get_explanation", methods=["POST"])
@@ -95,7 +122,7 @@ def get_explanation():
                           "a dentist or doctor. This is an AI screening result, not a diagnosis.",
                           f"Explain the diagnosis: {diagnosis}")
         return jsonify({"explanation": text})
-    except Exception as e:
+    except GeminiError as e:
         return jsonify({"error": str(e)}), 500
 
 
@@ -107,7 +134,7 @@ def explain_term():
     try:
         return jsonify({"definition": ask_gemini("Act as a medical dictionary. Give a one-sentence definition.",
                                                  f"Define {term}")})
-    except Exception as e:
+    except GeminiError as e:
         return jsonify({"error": str(e)}), 500
 
 
