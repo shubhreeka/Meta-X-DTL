@@ -24,6 +24,23 @@ from src.gradcam import build_full_model, overlay, predict_with_gradcam
 app = Flask(__name__)
 CORS(app)
 
+def _load_local_env():
+    """Read KEY=value lines from a .env file next to this script (the file is git-ignored)."""
+    env_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".env")
+    if os.path.exists(env_file):
+        with open(env_file, encoding="utf-8") as fh:
+            for line in fh:
+                line = line.strip()
+                if line and not line.startswith("#") and "=" in line:
+                    key, value = line.split("=", 1)
+                    value = value.strip().strip('"').strip("'")
+                    if value:
+                        os.environ.setdefault(key.strip(), value)
+
+
+_load_local_env()
+
+
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 GEMINI_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent"
 

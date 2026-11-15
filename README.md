@@ -104,7 +104,7 @@ datasets and a target for future work (lesion-focused cropping and segmentation 
 python server.py            # API on http://127.0.0.1:9001
 ```
 Then open `index.html`, upload a photo and get the diagnosis, confidence and Grad-CAM heatmap.
-For the optional plain-language explanation, set `GEMINI_API_KEY` first.
+For the optional plain-language explanation, copy `.env.example` to `.env` and put your key after `GEMINI_API_KEY=`.
 
 | Endpoint | Description |
 |---|---|
